@@ -2,10 +2,16 @@
 # example of logging
 
 import logging
-logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s \
-        - %(message)s')
+logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
 logging.debug('Start of Program')
 
+
+logging.info('some details regarding the debug')
+logging.warning('an error message is about to be logged')
+logging.error('Error has occured')
+logging.critical('program is donezo')
+
+logging.disable(logging.CRITICAL)
 
 def factorial(n):
     logging.debug('start of factorial(%s%%)' % (n))
